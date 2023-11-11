@@ -17,7 +17,7 @@ export default function ContactsTable({ users }) {
           <tbody className="text-lg">
             {users.map((user) => (
               <tr
-                className="mt-10 hover:outline-dashed outline outline-offset-2 outline-pink-500 rounded-xl	"
+                className="mt-10 hover:outline-purple-600 outline outline-offset-2 outline-pink-500 rounded-xl	"
                 key={user.id}
               >
                 <td className="p-5">

@@ -34,7 +34,6 @@ export default function ContactShowPage({}) {
     }
   }
 
-  // console.log(soloContact);
 
   return (
     <>{loading ? <LoadingButton /> : <ContactsShowCard solo={soloContact} />}</>
