@@ -20,7 +20,11 @@ export default function ContactsTable({ users }) {
                 className="mt-10 hover:outline-dashed outline outline-offset-2 outline-pink-500 rounded-xl	"
                 key={user.id}
               >
-                <td className="p-5">{user.id}</td>
+                <td className="p-5">
+                  <div className="w-10 h-10 bg-pink-500 border-4 border-indigo-600/100 rounded-full flex items-center justify-center text-white">
+                    {user.name[0]}
+                  </div>
+                </td>
                 <td className="m-5">{user.name}</td>
                 <td>
                   <Link to={`/contact?selectedId=${user.id}`}>
