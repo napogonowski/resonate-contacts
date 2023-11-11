@@ -9,15 +9,18 @@ export default function ContactsShowCard({ solo }) {
   console.log(soloContact);
   return (
     <>
-      <div className="flex justify-center mt-5 tracking-wide ">
-        <div>
-          <h5>Photo</h5>
+      <div className="relative flex justify-center mb-[-20px] mt-10">
+        <div className="h-40 w-40 bg-pink-500 border-4 border-indigo-600/100 rounded-full flex items-center justify-center ">
+          <p className="text-6xl text-white font-serif">{solo.name[0]}</p>
         </div>
-        <div></div>
-        <div className=" grid grid-cols-3 grid-rows-5 border-separate border-spacing-4 border-4 border-pink-500 bg-white/50 p-5 text-left rounded-xl mt-10 gap-4">
-          <p className="row-start-1 col-span-2 text-lg font-medium text-center 	">
-            {solo.name}
-          </p>
+      </div>
+      <div className="flex justify-center tracking-wide ">
+        <div className=" grid grid-cols-3 grid-rows-5 border-separate border-spacing-4 border-4 border-pink-500 bg-white/50 p-5 text-left rounded-xl  gap-4">
+          <div className="row-start-1 col-span-3 flex justify-center">
+            <p className=" text-2xl font-medium ">
+              {solo.name}
+            </p>
+          </div>
           <Phone className="row-start-2 cols-start-1 w-1/2 text-purple-600" />
           <p className=" row-start-2 col-start-2 col-span-2">{solo.phone}</p>
           <Mail className="col-start-1 row-start-3 w-1/2 text-purple-600 " />
@@ -31,13 +34,12 @@ export default function ContactsShowCard({ solo }) {
             {solo.address.suite} - {solo.address.street} Street
           </p>
         </div>
-
-        <Link to={"/home"}>
-          <button className="text-white bg-gradient-to-r from-purple-500 to-pink-500 hover:bg-gradient-to-l focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 font-medium rounded-lg text-base px-5 py-2.5 text-center me-2">
-            Back
-          </button>
-        </Link>
       </div>
+      <Link to={"/home"}>
+        <button className="text-white bg-gradient-to-r from-purple-500 to-pink-500 hover:bg-gradient-to-l focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 font-medium rounded-lg text-base px-5 py-2.5 text-center mt-5 w-52">
+          Back
+        </button>
+      </Link>
     </>
   );
 }

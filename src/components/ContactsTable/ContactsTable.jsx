@@ -2,18 +2,11 @@ import { Link } from "react-router-dom";
 export default function ContactsTable({ users }) {
   return (
     <>
-      <h1 className="text-3xl mt-10	text-purple-600 font-bold	">
+      <h1 className="text-3xl mt-10	text-pink-500 font-bold	">
         My Contacts ({users.length})
       </h1>
       <div className="flex justify-center mt-5 ">
         <table className="border-separate border-spacing-4 border-4 bg-white/50 p-2 text-left rounded-xl ">
-          {/* <thead>
-            <tr>
-              <th></th>
-              <th></th>
-              <th></th>
-            </tr>
-          </thead> */}
           <tbody className="text-lg">
             {users.map((user) => (
               <tr
@@ -21,7 +14,7 @@ export default function ContactsTable({ users }) {
                 key={user.id}
               >
                 <td className="p-5">
-                  <div className="w-10 h-10 bg-pink-500 border-4 border-indigo-600/100 rounded-full flex items-center justify-center text-white">
+                  <div className="w-10 h-10 bg-pink-500 border-4 border-indigo-600/100 rounded-full flex items-center justify-center text-white font-serif">
                     {user.name[0]}
                   </div>
                 </td>
