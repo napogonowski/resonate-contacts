@@ -9,9 +9,9 @@ export default function ContactsShowCard({ solo }) {
   console.log(soloContact);
   return (
     <>
-      <div className="relative flex justify-center mb-[-20px] mt-10">
+      <div className="relative flex justify-center mb-[-20px] pt-20 ">
         <div className="h-40 w-40 bg-pink-500 border-4 border-indigo-600/100 rounded-full flex items-center justify-center ">
-          <p className="text-6xl text-white font-serif">{solo.name[0]}</p>
+          <p className="text-7xl text-white title-font">{solo.name[0]}</p>
         </div>
       </div>
       <div className="flex justify-center tracking-wide ">
