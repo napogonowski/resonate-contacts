@@ -1,12 +1,7 @@
-import { useState, useEffect } from "react";
-import { useSearchParams, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Phone, Mail, Briefcase, Home } from "lucide-react";
 
 export default function ContactsShowCard({ solo }) {
-  const [soloContact, setSoloContact] = useState({});
-  const [searchParams] = useSearchParams();
-  const selectedId = searchParams.get("selectedId");
-  console.log(soloContact);
   return (
     <>
       <div className="relative flex justify-center mb-[-20px] pt-20 ">
@@ -17,9 +12,7 @@ export default function ContactsShowCard({ solo }) {
       <div className="flex justify-center tracking-wide ">
         <div className=" grid grid-cols-3 grid-rows-5 border-separate border-spacing-4 border-4 border-pink-500 bg-white/50 p-5 text-left rounded-xl  gap-4">
           <div className="row-start-1 col-span-3 flex justify-center">
-            <p className=" text-2xl font-medium ">
-              {solo.name}
-            </p>
+            <p className=" text-2xl font-medium ">{solo.name}</p>
           </div>
           <Phone className="row-start-2 cols-start-1 w-1/2 text-purple-600" />
           <p className=" row-start-2 col-start-2 col-span-2">{solo.phone}</p>

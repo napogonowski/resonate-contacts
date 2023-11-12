@@ -10,14 +10,10 @@ export default function ContactShowPage({}) {
   const selectedId = searchParams.get("selectedId");
   const url = `https://jsonplaceholder.typicode.com/users/${selectedId}`;
 
-  // useEffect(() => {
-  //   fetch(url)
-  //     .then((response) => response.json())
-  //     .then((json) => setSoloContact(json));
-  // }, []);
   useEffect(() => {
     fetchUser();
   }, []);
+
   async function fetchUser() {
     try {
       const res = await fetch(url);
@@ -33,7 +29,6 @@ export default function ContactShowPage({}) {
       setLoading(false);
     }
   }
-
 
   return (
     <>{loading ? <LoadingButton /> : <ContactsShowCard solo={soloContact} />}</>
