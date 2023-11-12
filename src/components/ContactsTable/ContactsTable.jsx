@@ -3,11 +3,11 @@ import { Contact } from "lucide-react";
 export default function ContactsTable({ users }) {
   return (
     <>
-      <h1 className="text-3xl mt-2 md:mt-5	tracking-tighter text-pink-500 font-medium	">
+      <h1 className="text-3xl mt-2 md:mt-5	tracking-tighter text-pink-500 font-medium">
         My Contacts ({users.length})
       </h1>
-      <div className="flex justify-center mt-5 ">
-        <table className="border-separate border-spacing-4 border-4 bg-white/50 p-2 text-left rounded-xl ">
+      <div className="flex justify-center mt-5">
+        <table className="border-separate border-spacing-4 border-4 bg-white/50 p-2 text-left rounded-xl">
           <tbody className="text-lg">
             {users.map((user) => (
               <tr
