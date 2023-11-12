@@ -3,7 +3,7 @@ import { useSearchParams } from "react-router-dom";
 import ContactsShowCard from "../../components/ContactsShowCard/ContactsShowCard";
 import LoadingButton from "../../components/LoadingButton/LoadingButton";
 
-export default function ContactShowPage({}) {
+export default function ContactShowPage() {
   const [soloContact, setSoloContact] = useState({});
   const [loading, setLoading] = useState(true);
   const [searchParams] = useSearchParams();
@@ -24,7 +24,6 @@ export default function ContactShowPage({}) {
       const userData = await res.json();
       setSoloContact(userData);
     } catch (error) {
-      console.log(error);
     } finally {
       setLoading(false);
     }
